@@ -1,0 +1,35 @@
+from __future__ import annotations
+
+from pathlib import Path
+
+APP_NAME = "Siêu Thị Mini"
+PACKAGE_ROOT = Path(__file__).resolve().parents[1]
+PROJECT_ROOT = PACKAGE_ROOT.parent
+DEFAULT_DB_PATH = PACKAGE_ROOT / "app_data" / "sieu_thi_mini.db"
+
+DEFAULT_ADMIN_USERNAME = "admin"
+DEFAULT_ADMIN_PASSWORD = "admin123"
+
+ROLE_ADMIN = "ADMIN"
+ROLE_MANAGER = "MANAGER"
+ROLE_CASHIER = "CASHIER"
+ROLE_WAREHOUSE = "WAREHOUSE"
+
+PERM_USER_MANAGE = "USER_MANAGE"
+PERM_PRODUCT_MANAGE = "PRODUCT_MANAGE"
+PERM_SALE_MANAGE = "SALE_MANAGE"
+PERM_WAREHOUSE_MANAGE = "WAREHOUSE_MANAGE"
+PERM_REPORT_VIEW = "REPORT_VIEW"
+PERM_AUDIT_VIEW = "AUDIT_VIEW"
+
+PERMISSION_NAMES = {
+    PERM_USER_MANAGE: "Quản lý người dùng",
+    PERM_PRODUCT_MANAGE: "Quản lý sản phẩm",
+    PERM_SALE_MANAGE: "Bán hàng",
+    PERM_WAREHOUSE_MANAGE: "Quản lý kho",
+    PERM_REPORT_VIEW: "Xem báo cáo",
+    PERM_AUDIT_VIEW: "Xem nhật ký",
+}
+
+DATE_TIME_FORMAT = "%Y-%m-%d %H:%M:%S"
+
